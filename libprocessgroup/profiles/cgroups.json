@@ -28,18 +28,28 @@
       "UID": "root",
       "GID": "system",
       "Optional": true
+    },
+    {
+      "Controller": "schedtune",
+      "Path": "/dev/stune",
+      "Mode": "0755",
+      "UID": "system",
+      "GID": "system",
+      "Optional": true
+    },
+    {
+      "Controller": "freezer",
+      "Path": "/dev/freezer",
+      "Mode": "0755",
+      "UID": "system",
+      "GID": "system"
     }
   ],
   "Cgroups2": {
-    "Path": "/sys/fs/cgroup",
-    "Mode": "0775",
-    "UID": "system",
-    "GID": "system",
-    "Controllers": [
-      {
-        "Controller": "freezer",
-        "Path": "."
-      }
-    ]
+    "Path": "/dev/cg2_bpf",
+    "Mode": "0600",
+    "UID": "root",
+    "GID": "root",
+    "Optional": true
   }
 }
